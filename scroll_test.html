@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<style type="text/css">
+		html, body {overflow:hidden;}
+		header {height:50px;background:red;}
+		footer {height:50px;background:red;}
+		#test {position:fixed;top:0;left:0;}
+		#contents {height:2000px;}
+		#layerWrap {position:fixed;top:0;right:0;bottom:0;left:0;}
+		#layerWrap:after {content:"";position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.5);}
+		.layerContents {padding:20px;position:fixed;top:30px;right:30px;bottom:30px;left:30px;background:#fff;border-radius: 10px;z-index:2;}
+		.layerScroll {overflow:auto;height:100%;background:green;-webkit-overflow-scrolling: touch;}
+	</style>
+</head>
+
+<body>
+
+	<div id="wrap">
+		<header>
+			<h1>header</h1>
+		</header>
+
+		<section id="contents">
+			<p id="test"></p>
+			ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br><br>
+			ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br><br>
+			ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br><br>
+			ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br><br>
+		</section>
+
+		<footer>
+			<p>footer</p>
+		</footer>
+
+		<div id="layerWrap">
+			<div class="layerContents">
+				<div class="layerScroll">
+					ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br><br>
+					ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br><br>
+					ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br><br>
+					ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br>ㄱㄱ<br><br>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+	$(function(){
+		$('#layerWrap').bind('touchmove', (e) => {
+			e.preventDefault();
+			$(window).on('scroll', function(){
+				$('#test').text($(window).scrollTop());
+			});
+		});
+		$('.layerScroll').bind('touchmove', (e) => {
+			e.stopPropagation();
+			scrollOff($('.layerScroll'));
+		});
+	});
+	function scrollOff(ele) {
+		var scrollWrap = ele;
+		
+		scrollWrap.on('touchstart', function(e){
+			var toucheA = e.originalEvent.touches;
+			toucheA = toucheA[0];
+			startY = toucheA.pageY;
+			
+			scrollWrap.on( 'touchmove', function(e) {
+				var toucheB =  e.originalEvent.touches; 
+				if( toucheB.length > 1 || e.originalEvent.scale && e.originalEvent.scale !== 1 ) {
+					e.preventDefault();
+					return;
+				}
+				toucheB = toucheB[0];
+				var _y = toucheB.pageY - startY;
+				if( ( _y > 0 && scrollWrap.scrollTop() <= 1 )
+				|| ( _y < 0 &&  scrollWrap.scrollTop() >= scrollWrap[0].scrollHeight - scrollWrap.outerHeight() - 1 ) ) {
+					e.preventDefault();
+				}
+			});
+			scrollWrap.on('touchend', function() {
+				startY = 0;
+			});
+		});
+	}
+	</script>
+
+</body>
+</html>
+
