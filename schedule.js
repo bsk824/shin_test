@@ -45,7 +45,7 @@ var scheduleItemView = function(_this) {
 	parent.addClass('active').siblings().removeClass('active');
 	
 	sch.scrollStatus = 1;
-	$(sch.wrap).stop().animate({scrollTop : sch.pos[idx]},500);
+	$('html, body').stop().animate({scrollTop : sch.pos[idx]},400);
 	$(sch.timeWrap).stop().animate({scrollTop : sch.timePos[idx]},500,function(){
 		sch.scrollStatus = 0;
 	});
@@ -66,24 +66,19 @@ var dateSel = function(_this) {
 	parent.addClass('active').siblings().removeClass('active');
 
 	$(sch.dateWrap).stop().animate({scrollLeft : dateActivePos(idx)},200);
-	
-	sch.scrollStatus = 1;
-	$(sch.wrap).stop().animate({scrollTop : sch.schPos[idx]},500);
-	$(sch.timeWrap).stop().animate({scrollTop : sch.timePos[idx]},500,function(){
-		sch.scrollStatus = 0;
-	});
 }
 var todayActive = function(idx) {
 	$(sch.dateWrap).scrollLeft(dateActivePos(idx)).find('.item').eq(idx).removeClass('active');
 }
 
 $(function(){
-	
-	posSet('date_sel');
-	posSet('time_sel');
-	posSet('schedule_list');
-	
-	todayActive(7);
+	setTimeout(function(){
+		posSet('date_sel');
+		posSet('time_sel');
+		posSet('schedule_list');
+		
+		todayActive(7);
+	},200);
 
 	$(window).scroll(function(){
 		var $this = $(this),
