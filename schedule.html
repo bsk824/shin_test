@@ -1,0 +1,3289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>layer scroll test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="stylesheet" href="schedule.css">
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="schedule.js"></script>
+</head>
+
+<body>
+	<div class="date_sel">
+		<ul>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>10</b>수</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>11</b>목</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>12</b>금</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>13</b>토</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>14</b>일</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>15</b>월</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>16</b>화</span></button></li>
+			<li class="item today"><button type="button" onclick="dateSel(this)"><span><b>17</b>오늘</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>18</b>목</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>19</b>금</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>20</b>토</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>21</b>일</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>22</b>월</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>23</b>화</span></button></li>
+			<li class="item"><button type="button" onclick="dateSel(this)"><span><b>24</b>수</span></button></li>
+		</ul>
+	</div>
+	<div class="time_sel">
+		<ul>
+			<li class="item">
+				<p class="date">11월 10일 (수)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월11일 (목)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월12일 (금)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월13일 (토)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월14일 (일)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월15일 (월)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월16일 (화)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item active">
+				<p class="date">11월17일 (수)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월18일 (목)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월19일 (금)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월20일 (토)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월21일 (일)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월22일 (월)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월23일 (화)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<p class="date">11월24일 (수)</p>
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>13:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>14:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>15:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>16:40</span>
+				</button>
+			</li>
+			<li class="item">
+				<button type="button" onclick="scheduleItemView(this);">
+					<img src="m/images/img_santa_m.png" alt="" />
+					<span>17:40</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+	<section class="schedule_list">
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 10일</b> (수)</p>
+			
+			<div class="item on_air">
+				<p class="brodcast_status">
+					<span class="status">ON-AIR</span>
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+					<span class="only_brodcast">생방송 중 구매가능</span>
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 11일</b> (목)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 12일</b> (금)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 13일</b> (토)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 14일</b> (일)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 15일</b> (월)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 16일</b> (화)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 17일</b> (수)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 18일</b> (목)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 19일</b> (금)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 20일</b> (토)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		<!-- 일별 리스트 -->
+		<div  class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 21일</b> (일)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		
+		<!-- 일별 리스트 -->
+		<div  class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 22일</b> (월)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 23일</b> (화)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+		<!-- 일별 리스트 -->
+		<div class="date_wrap">
+			<p class="schedule_alert">방송편성은 당사사정으로 인해 변경 될 수 있습니다.</p>
+			<p class="date"><b>11월 24일</b> (수)</p>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_talk">바로TV TALK <span>841</span></button>
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+				<!-- 함께 방송한 상품 -->
+				<div class="pd_more">
+					<div class="pd_more_wrap">
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb"><img src="m/images/img_santa_m.png" alt="" /></span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+						<div class="pd_item">
+							<a href="#">
+								<span class="thumb">
+									<img src="m/images/img_santa_m.png" alt="" />
+									<span class="prd_soldout">SOLD<br>OUT</span>
+								</span>
+								<span class="name">[LG전자] LG전자 인기BEST 가전 건조기</span>
+								<span class="price">
+									<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+									<span><span class="blind">정상가</span><del>99,000</del>원</span>
+								</span>
+							</a>
+							<button type="button" class="btn_broadcast">방송알림</button>
+						</div>
+					</div>
+					<button type="button" class="more">상품 2개 더보기</button> 
+				</div>
+				<!-- //함께 방송한 상품 -->
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<p class="brodcast_status">
+					<span class="time">01:14:37 남음</span>
+				</p>
+				<div class="banner">
+					<a href="#"><img src="" alt="배너" /></a>
+				</div>
+				<div class="thumb">
+					<button type="button" class="play">동영상보기</button>
+					<img src="" alt="상품명" />
+				</div>
+				<div class="pd_info">
+					<p class="benefit">
+						<span>TV쇼핑할인</span>
+						<span>일시불할인</span>
+						<span>무5</span>
+					</p>
+					<p class="name">[다이슨] [한정판 패키지] DYSON 다이슨 슈퍼소닉 헤어 드라이어</p>
+					<p class="price">
+						<strong><span class="blind">판매가</span><b>98,000</b>원</strong>
+						<span><span class="blind">정상가</span><del>99,000</del>원</span>
+					</p>
+					<div class="btns">
+						<button type="button" class="btn_stype1 btn_broadcast">방송알림 <span>1,578</span></button>
+						<button type="button" class="btn_stype1 c2">바로구매</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- //일별 리스트 -->
+	</section>
+
+</body>
+</html>
