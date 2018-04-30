@@ -15,7 +15,7 @@
 		#layerWrap {position:fixed;top:0;right:0;bottom:0;left:0;}
 		#layerWrap:after {content:"";position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.5);}
 		.layerContents {padding:20px;position:fixed;top:30px;right:30px;bottom:30px;left:30px;background:#fff;border-radius: 10px;z-index:2;}
-		.layerScroll {overflow:auto;height:100%;background:green;-webkit-overflow-scrolling: touch;}
+		.layerScroll {overflow:auto;height:100%;background:green;-webkit-overflow-scrolling: touch;overscroll-behavior: contain;}
 	</style>
 </head>
 
@@ -61,7 +61,7 @@
 		});
 		$('.layerScroll').bind('touchmove', (e) => {
 			e.stopPropagation();
-			scrollOff($('.layerScroll'));
+			// scrollOff($('.layerScroll'));
 		});
 	});
 	function scrollOff(ele) {
